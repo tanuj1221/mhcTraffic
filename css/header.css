@@ -1,0 +1,604 @@
+/* About Us Section Styles */
+.dt-about {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    font-family: system-ui, -apple-system, sans-serif;
+    width: 100%;
+}
+
+.dt-about__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.dt-about__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.dt-about__underline {
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #0066cc, #0052a3);
+    margin: 0 auto 50px;
+    border-radius: 2px;
+}
+
+/* Header Card for Company Name */
+.dt-about__header-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.dt-about__header-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0066cc, #0052a3);
+}
+
+.dt-about__subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.dt-about__tagline {
+    color: #0066cc;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Cards Grid Layout */
+.dt-about__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* About Cards - Same style as service cards */
+.dt-about-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dt-about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dt-about-card__header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.dt-about-card__icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0066cc;
+    flex-shrink: 0;
+}
+
+.dt-about-card__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.dt-about-card__divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.dt-about-card__description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+.dt-about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0066cc, #0052a3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dt-about-card:hover::before {
+    opacity: 1;
+}
+
+/* Responsive styles for About Us */
+@media (max-width: 1024px) {
+    .dt-about__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dt-about {
+        padding: 60px 0;
+    }
+    
+    .dt-about__title {
+        font-size: 28px;
+    }
+    
+    .dt-about__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .dt-about__header-card {
+        padding: 25px 20px;
+    }
+    
+    .dt-about__subtitle {
+        font-size: 20px;
+    }
+    
+    .dt-about__tagline {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dt-about__header-card {
+        padding: 20px 15px;
+    }
+    
+    .dt-about__title {
+        font-size: 24px;
+    }
+    
+    .dt-about__subtitle {
+        font-size: 18px;
+    }
+    
+    .dt-about-card {
+        padding: 20px;
+    }
+    
+    .dt-about-card__title {
+        font-size: 18px;
+    }
+    
+    .dt-about-card__description {
+        font-size: 14px;
+    }
+}
+
+/* Why Choose Us Section Styles */
+.dt-why-choose {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+    color: white;
+    font-family: system-ui, -apple-system, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.dt-why-choose::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.05"><polygon points="0,100 1000,0 1000,100"/></svg>');
+    pointer-events: none;
+}
+
+.dt-why-choose__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.dt-why-choose__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.dt-why-choose__underline {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffffff, #e6f3ff);
+    margin: 0 auto 50px;
+    border-radius: 2px;
+}
+
+.dt-why-choose__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dt-why-choose-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dt-why-choose-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ffffff, #e6f3ff);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.dt-why-choose-card:hover::before {
+    transform: scaleX(1);
+}
+
+.dt-why-choose-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dt-why-choose-card__icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.dt-why-choose-card:hover .dt-why-choose-card__icon {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.dt-why-choose-card__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.dt-why-choose-card__description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Responsive styles for Why Choose Us */
+@media (max-width: 768px) {
+    .dt-why-choose {
+        padding: 60px 0;
+    }
+    
+    .dt-why-choose__title {
+        font-size: 28px;
+    }
+    
+    .dt-why-choose__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .dt-why-choose-card {
+        padding: 25px 20px;
+    }
+    
+    .dt-why-choose-card__icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dt-why-choose__title {
+        font-size: 24px;
+    }
+    
+    .dt-why-choose-card {
+        padding: 20px 15px;
+    }
+    
+    .dt-why-choose-card__title {
+        font-size: 18px;
+    }
+    
+    .dt-why-choose-card__description {
+        font-size: 14px;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.dt-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dt-header--transparent {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dt-header--transparent .dt-nav__link {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.dt-header--transparent .dt-mobile-toggle span {
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced glassmorphism when scrolling */
+.dt-header--scrolled {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.dt-header--scrolled .dt-nav__link {
+    color: #333;
+}
+
+.dt-header--scrolled .dt-mobile-toggle span {
+    background: #333;
+}
+
+.dt-header__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.dt-logo img {
+    height: 50px;
+}
+
+.dt-nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dt-nav__link {
+    padding: 10px 20px;
+    color: white;
+    font-weight: 500;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dt-nav__link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.dt-nav__link:hover::before {
+    opacity: 1;
+}
+
+.dt-nav__link:hover {
+    transform: translateY(-2px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dt-nav__item--has-dropdown {
+    position: relative;
+}
+
+.dt-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    min-width: 200px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    list-style: none;
+    padding: 0;
+}
+
+.dt-nav__item--has-dropdown:hover .dt-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dt-dropdown__link {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 4px 8px;
+}
+
+.dt-dropdown__link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transform: translateX(5px);
+}
+
+.dt-mobile-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.dt-mobile-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+}
+
+.dt-mobile-toggle span {
+    width: 25px;
+    height: 2px;
+    background: #333;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .dt-mobile-toggle {
+        display: flex;
+    }
+
+    .dt-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(25px);
+        padding: 20px;
+        display: none;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: none;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .dt-nav.active {
+        display: block;
+    }
+
+    .dt-nav__list {
+        flex-direction: column;
+    }
+
+    .dt-nav__link {
+        color: white;
+        padding: 15px 10px;
+        margin: 5px 0;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .dt-nav__link:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateX(10px);
+    }
+
+    .dt-dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        display: none;
+    }
+
+    .dt-nav__item--has-dropdown.active .dt-dropdown {
+        display: block;
+    }
+
+    .dt-dropdown__link {
+        padding-left: 40px;
+    }
+}
