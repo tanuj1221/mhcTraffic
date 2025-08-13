@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 3000;
+const host = '0.0.0.0';  // This allows connections from any IP address
 
 // Serve static files from different directories
 app.use('/css', express.static(path.join(__dirname, 'css')));
@@ -21,6 +22,6 @@ app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'html', '404.html'));
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+app.listen(port, host, () => {
+    console.log(`Server running at http://${host}:${port}`);
 });
